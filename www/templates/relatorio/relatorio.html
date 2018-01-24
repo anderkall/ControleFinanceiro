@@ -1,0 +1,28 @@
+<ion-view view-title="Relatório" cache-view="false" ng-cloak>
+  <ion-content>
+    <div class="card"  flex layout-padding layout-margin>
+
+      <div layout="row" layout-align="start center">
+        <strong>Gastos por Categoria</strong>
+        <md-button class="md-icon-button" aria-label="Grafico em Linha" ng-click="graficoEmLinha()">
+          <md-icon md-svg-icon="./img/icon/ic_grafico_linha.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="Grafico em Barra" ng-click="graficoEmBarra()">
+          <md-icon md-svg-icon="./img/icon/ic_grafico_barra.svg"></md-icon>
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="Grafico em Pizza" ng-click="graficoEmPizza()">
+          <md-icon md-svg-icon="./img/icon/ic_grafico_pizza.svg"></md-icon>
+        </md-button>
+      </div>
+
+      <div id="divRelatorio" ng-show="exibirGrafico"></div>
+      <div layout="column" align="center" ng-show="!exibirGrafico">
+        <img  layout-padding layout-margin src="./img/icon/ic_triste.svg"/>
+        <strong>Você ainda não cadastrou nenhuma despesa !</strong>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
